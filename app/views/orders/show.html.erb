@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @order.number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @order.name %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @order.notes %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <b>Unit price:</b>
+  <%= @order.unit_price %>
+</p>
+
+<p>
+  <b>Shipping price:</b>
+  <%= @order.shipping_price %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @order.active %>
+</p>
+
+<p>
+  <b>Invoiced:</b>
+  <%= @order.invoiced %>
+</p>
+
+<p>
+  <b>Paid:</b>
+  <%= @order.paid %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @order.image %>
+</p>
+
+<p>
+  <b>Factory invoice:</b>
+  <%= @order.factory_invoice %>
+</p>
+
+<p>
+  <b>Tro invoice:</b>
+  <%= @order.tro_invoice %>
+</p>
+
+<p>
+  <b>Tracking num:</b>
+  <%= @order.tracking_num %>
+</p>
+
+<p>
+  <b>Order confirmed date:</b>
+  <%= @order.order_confirmed_date %>
+</p>
+
+<p>
+  <b>Invoice date:</b>
+  <%= @order.invoice_date %>
+</p>
+
+<p>
+  <b>Cust po num:</b>
+  <%= @order.cust_po_num %>
+</p>
+
+<p>
+  <b>Thread colours:</b>
+  <%= @order.thread_colours %>
+</p>
+
+<p>
+  <b>Fabric colours:</b>
+  <%= @order.fabric_colours %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,89 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_price %><br />
+    <%= f.text_field :unit_price %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_price %><br />
+    <%= f.text_field :shipping_price %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :invoiced %><br />
+    <%= f.check_box :invoiced %>
+  </div>
+  <div class="field">
+    <%= f.label :paid %><br />
+    <%= f.check_box :paid %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :factory_invoice %><br />
+    <%= f.text_field :factory_invoice %>
+  </div>
+  <div class="field">
+    <%= f.label :tro_invoice %><br />
+    <%= f.text_field :tro_invoice %>
+  </div>
+  <div class="field">
+    <%= f.label :tracking_num %><br />
+    <%= f.text_field :tracking_num %>
+  </div>
+  <div class="field">
+    <%= f.label :order_confirmed_date %><br />
+    <%= f.datetime_select :order_confirmed_date %>
+  </div>
+  <div class="field">
+    <%= f.label :invoice_date %><br />
+    <%= f.datetime_select :invoice_date %>
+  </div>
+  <div class="field">
+    <%= f.label :cust_po_num %><br />
+    <%= f.text_field :cust_po_num %>
+  </div>
+  <div class="field">
+    <%= f.label :thread_colours %><br />
+    <%= f.text_area :thread_colours %>
+  </div>
+  <div class="field">
+    <%= f.label :fabric_colours %><br />
+    <%= f.text_area :fabric_colours %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

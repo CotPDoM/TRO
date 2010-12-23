@@ -1,0 +1,41 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Total</th>
+    <th>Invoiced</th>
+    <th>Paid</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td></td>
+    <td><%= link_to order.name, order %></td>
+    <td><%= order.quantity %></td>
+    <td><%= number_to_currency(order.total) %></td>
+    <td><%= if order.invoiced? then image_tag('accept.png') else image_tag('stop.png') end %></td>
+    <td><%= if order.paid? then image_tag('accept.png') else image_tag('stop.png') end %></td>
+    <td><%= order.image %></td>
+    <td><%= order.factory_invoice %></td>
+    <td><%= order.tro_invoice %></td>
+    <td><%= order.tracking_num %></td>
+    <td><%= order.order_confirmed_date.to_date %></td>
+    <td><%= order.invoice_date.to_date %></td>
+
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>
